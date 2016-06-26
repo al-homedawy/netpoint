@@ -1,5 +1,7 @@
 package com.example.hussain_pc.netpoint.NETPoint;
 
+import com.example.netpoint.NETUrl;
+
 import junit.framework.TestCase;
 
 /**
@@ -11,7 +13,7 @@ public class NETUrlTest extends TestCase {
     public void setUp() throws Exception {
         super.setUp();
 
-        netUrl = new NETUrl("www.test.com/test.php");
+        netUrl = new NETUrl("www.test.com/test.php", false);
 
     }
 

@@ -1,4 +1,4 @@
-package com.example.hussain_pc.netpoint.NETPoint;
+package com.example.netpoint;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -7,14 +7,30 @@ import java.util.Set;
 public class NETUrl {
     private String httpUrl;
     private Map httpParameters;
+    private boolean httpJson;
 
-    public NETUrl(String httpUrl) {
+    /**
+     * @param httpUrl  Must be a url conforming to proper protocol
+     *                 standards, ex: http://www.google.com
+     * @param httpJson True if the data at the end-point is formatted
+     *                 with JSon
+     */
+    public NETUrl(String httpUrl, boolean httpJson) {
         this.httpUrl = httpUrl;
         this.httpParameters = new LinkedHashMap();
+        this.httpJson = httpJson;
     }
 
     public String getHttpUrl() {
         return httpUrl;
+    }
+
+    public boolean getHttpJson() {
+        return httpJson;
+    }
+
+    public void setHttpJson(boolean httpJson) {
+        this.httpJson = httpJson;
     }
 
     public void setHttpUrl(String httpUrl) {
